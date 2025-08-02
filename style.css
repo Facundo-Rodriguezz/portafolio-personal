@@ -201,6 +201,7 @@ section {
         margin-left: 0;
         margin-right: 65px;
     }
+
     .navlist a:not(:first-child) {
         margin-left: 0;
     }
@@ -274,6 +275,8 @@ section {
         align-items: center;
         padding: 30px 20px;
         transition: all .5s ease;
+        pointer-events: none;
+        opacity: 0;
     }
 
     .navlist a {
@@ -283,8 +286,10 @@ section {
     }
 
     #menu-toggle:checked~.navlist {
-    right: 0;
-}
+        right: 0;
+        pointer-events: auto;
+        opacity: 1;
+    }
 }
 
 @media (max-width: 480px) {
@@ -320,7 +325,10 @@ section {
     section {
         padding: 0 3%;
     }
+
     #menu-toggle:checked~.navlist {
-    right: 0;
-}
+        right: 0;
+        pointer-events: auto;
+        opacity: 1;
+    }
 }
