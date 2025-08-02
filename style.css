@@ -254,7 +254,6 @@ section {
 
     .hero-image img {
         margin: 0;
-
     }
 
     .hero {
@@ -266,7 +265,7 @@ section {
     .navlist {
         position: absolute;
         top: 100%;
-        right: -100%;
+        right: 5vw; /* Ajusta el menú más a la derecha */
         width: 200px;
         height: 200px;
         background-color: #02313a71;
@@ -286,7 +285,7 @@ section {
     }
 
     #menu-toggle:checked~.navlist {
-        right: 0;
+        right: 5vw; /* Mantiene el menú a la derecha cuando está activo */
         pointer-events: auto;
         opacity: 1;
     }
@@ -311,8 +310,8 @@ section {
 
     .navlist {
         width: 90vw;
-        left: 5vw;
-        right: auto;
+        left: auto;
+        right: 2vw; /* Más a la derecha en mobile */
         height: 100vh;
         top: 60px;
         padding: 10px 0;
@@ -327,7 +326,7 @@ section {
     }
 
     #menu-toggle:checked~.navlist {
-        right: 0;
+        right: 2vw; /* Mantiene el menú a la derecha cuando está activo */
         pointer-events: auto;
         opacity: 1;
     }
