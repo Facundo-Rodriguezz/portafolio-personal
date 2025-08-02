@@ -194,6 +194,8 @@ section {
     transform: translateY(-5px);
 }
 
+
+
 @media (max-width:992px) {
     .navlist a:first-child {
         margin-left: 0;
@@ -281,8 +283,8 @@ section {
     }
 
     #menu-toggle:checked~.navlist {
-        right: 0;
-    }
+    right: 0;
+}
 }
 
 @media (max-width: 480px) {
@@ -318,4 +320,7 @@ section {
     section {
         padding: 0 3%;
     }
+    #menu-toggle:checked~.navlist {
+    right: 0;
+}
 }
