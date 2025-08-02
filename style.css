@@ -333,7 +333,7 @@ section {
 }
 
 @media (max-width: 250px) {
-    .hero-text h1 {
+     .hero-text h1 {
         font-size: 32px;
     }
 
@@ -352,7 +352,7 @@ section {
     .navlist {
         width: 90vw;
         left: auto;
-        right: 0vw;
+        right: 0vw; /* Más a la derecha en mobile */
         height: 100vh;
         top: 60px;
         padding: 10px 0;
@@ -367,7 +367,7 @@ section {
     }
 
     #menu-toggle:checked~.navlist {
-        right: 0vw;
+        right: 0vw; /* Mantiene el menú pegado a la derecha cuando está activo */
         pointer-events: auto;
         opacity: 1;
     }
