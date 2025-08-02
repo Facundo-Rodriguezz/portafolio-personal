@@ -311,7 +311,7 @@ section {
     .navlist {
         width: 90vw;
         left: auto;
-        right: 2vw; /* Más a la derecha en mobile */
+        right: 5vw; /* Más a la derecha en mobile */
         height: 100vh;
         top: 60px;
         padding: 10px 0;
@@ -326,7 +326,7 @@ section {
     }
 
     #menu-toggle:checked~.navlist {
-        right: 2vw; /* Mantiene el menú a la derecha cuando está activo */
+        right: 5vw; /* Mantiene el menú a la derecha cuando está activo */
         pointer-events: auto;
         opacity: 1;
     }
