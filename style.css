@@ -265,7 +265,8 @@ section {
     .navlist {
         position: absolute;
         top: 100%;
-        right: 0vw; /* Más a la derecha en mobile */
+        right: 0vw;
+        /* Más a la derecha en mobile */
         width: 200px;
         height: 200px;
         background-color: #02313a71;
@@ -285,7 +286,8 @@ section {
     }
 
     #menu-toggle:checked~.navlist {
-        right: 0vw; /* Mantiene el menú pegado a la derecha cuando está activo */
+        right: 0vw;
+        /* Mantiene el menú pegado a la derecha cuando está activo */
         pointer-events: auto;
         opacity: 1;
     }
@@ -311,7 +313,8 @@ section {
     .navlist {
         width: 90vw;
         left: auto;
-        right: 0vw; /* Más a la derecha en mobile */
+        right: 0vw;
+        /* Más a la derecha en mobile */
         height: 100vh;
         top: 60px;
         padding: 10px 0;
@@ -326,14 +329,46 @@ section {
     }
 
     #menu-toggle:checked~.navlist {
-        right: 0vw; /* Mantiene el menú pegado a la derecha cuando está activo */
+        right: 0vw;
+        /* Mantiene el menú pegado a la derecha cuando está activo */
         pointer-events: auto;
         opacity: 1;
     }
 }
 
-@media (max-width: 250px) {
-     .hero-text h1 {
+@media (max-width: 480px) {
+    .navlist {
+        position: absolute;
+        top: 100%;
+        right: 0vw;
+        /* Más a la derecha en mobile */
+        width: 200px;
+        height: 200px;
+        background-color: #02313a71;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        transition: all .5s ease;
+        pointer-events: none;
+        opacity: 0
+    }
+
+    #menu-toggle:checked~.navlist {
+        right: 0;
+        pointer-events: auto;
+        opacity: 1;
+    }
+
+    header {
+        padding: 10px 5%;
+    }
+
+    section {
+        padding: 0 3%;
+    }
+
+    .hero-text h1 {
         font-size: 32px;
     }
 
@@ -347,28 +382,5 @@ section {
 
     .hero-image img {
         width: 220px;
-    }
-
-    .navlist {
-        width: 90vw;
-        left: auto;
-        right: 0vw; /* Más a la derecha en mobile */
-        height: 100vh;
-        top: 60px;
-        padding: 10px 0;
-    }
-
-    header {
-        padding: 10px 5%;
-    }
-
-    section {
-        padding: 0 3%;
-    }
-
-    #menu-toggle:checked~.navlist {
-        right: 0vw; /* Mantiene el menú pegado a la derecha cuando está activo */
-        pointer-events: auto;
-        opacity: 1;
     }
 }
