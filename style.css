@@ -265,7 +265,7 @@ section {
     .navlist {
         position: absolute;
         top: 100%;
-        right: 5vw; /* Ajusta el menú más a la derecha */
+        right: 0vw; /* Más a la derecha en mobile */
         width: 200px;
         height: 200px;
         background-color: #02313a71;
@@ -285,7 +285,7 @@ section {
     }
 
     #menu-toggle:checked~.navlist {
-        right: 5vw; /* Mantiene el menú a la derecha cuando está activo */
+        right: 0vw; /* Mantiene el menú pegado a la derecha cuando está activo */
         pointer-events: auto;
         opacity: 1;
     }
@@ -311,7 +311,7 @@ section {
     .navlist {
         width: 90vw;
         left: auto;
-        right: 5vw; /* Más a la derecha en mobile */
+        right: 0vw; /* Más a la derecha en mobile */
         height: 100vh;
         top: 60px;
         padding: 10px 0;
@@ -326,8 +326,9 @@ section {
     }
 
     #menu-toggle:checked~.navlist {
-        right: 5vw; /* Mantiene el menú a la derecha cuando está activo */
+        right: 0vw; /* Mantiene el menú pegado a la derecha cuando está activo */
         pointer-events: auto;
         opacity: 1;
     }
 }
+
