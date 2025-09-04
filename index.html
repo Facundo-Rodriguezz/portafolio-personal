@@ -33,12 +33,13 @@
       <ul class="navlist">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">Sobre mi</a></li>
-        <li><a href="#projects">Projectos</a></li>
+        <li><a href="#skills">Tecnologías</a></li>
+        <li><a href="#projects">Proyectos</a></li>
         <li><a href="#contact">Contacto</a></li>
       </ul>
     </header>
 
-    <section class="hero">
+    <section id="home" class="hero">
       <div class="hero-text">
         <h5>Frontend Developer</h5>
         <h4>Python Java y React</h4>
@@ -48,7 +49,7 @@
           empresa <br />
           donde pueda aplicar todos mis conocimientos
         </p>
-        <a href= "/archivos/FacundoRodriguez_.pdf" target="_blank" rel="noopener">CV</a>
+        <a href= "/archivos/Facundo__Rodriguez.pdf" target="_blank" rel="noopener">CV</a>
         <a href="https://www.instagram.com/tupagina_weeb/" target="_blank" rel="noopener" class="videos"
           ><i class="ri-instagram-line"></i>Mi Emprendimiento</a
         >
@@ -66,10 +67,81 @@
       <a href="https://github.com/Facundo-Rodriguezz" target="_blank" rel="noopener"><i class="ri-github-fill"></i></a>
       <a href="https://www.linkedin.com/in/facundo-rodriguez-a05051241/" target="_blank" rel="noopener"><i class="ri-linkedin-box-line"></i></a>
     </div>
+    
     <div class="scroll-down">
-      <a href="#about"><i class="ri-arrow-down-s-fill"></i></i></a>
+      <a href="#about"><i class="ri-arrow-down-s-fill"></i></a>
+    </div>
+    
+
+  <section id="about" class="about">
+    <h2>Sobre mí</h2>
+    <p>
+    Tengo 22 años, soy desarrollador web con experiencia en Python, Java y React.
+    Me apasiona aprender tecnologías nuevas y aportar soluciones creativas...
+     </p>
+     <div class="scroll-down">
+      <a href="#projects"><i class="ri-arrow-down-s-fill"></i></a>
     </div>
 
+</section>
+
+<section id="skills" class="skills">
+  <h2>Tecnologías</h2>
+  <div class="grid-skills">
+    <div class="skill">
+      <img src="/assets/img/python.png" alt="Python" />
+      <h3>Python</h3>
+    </div>
+    <div class="skill">
+      <img src="/assets/img/java.png" alt="Java" />
+      <h3>Java</h3>
+    </div>
+    <div class="skill">
+      <img src="/assets/img/react.png" alt="React" />
+      <h3>React</h3>
+    </div>
+    <div class="skill">
+      <img src="/assets/img/html.png" alt="HTML5" />
+      <h3>HTML5</h3>
+    </div>
+    <div class="skill">
+      <img src="/assets/img/css.png" alt="CSS3" />
+      <h3>CSS3</h3>
+    </div>
+    <div class="skill">
+      <img src="/assets/img/js.png" alt="JavaScript" />
+      <h3>JavaScript</h3>
+    </div>
+    <div class="skill">
+      <img src="/assets/img/git.png" alt="Git" />
+      <h3>Git</h3>
+    </div>
+    <div class="skill">
+      <img src="/assets/img/github.png" alt="GitHub" />
+      <h3>GitHub</h3>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="projects" class="proyectos">
+  <h2>Proyectos</h2>
+  <div class="grid-proyectos" id="contenedor-proyectos"></div>
+  
+</section>
+<script src="proyectos.js"></script>
+
+<section id="contact" class="contact">
+  <h2>Contacto</h2>
+  <p>¿Quieres ponerte en contacto conmigo? ¡Envíame un mensaje!</p>
+  <form action="https://formspree.io/f/mayvlrpl" method="POST">
+    <input type="text" name="name" placeholder="Tu nombre" required />
+    <input type="email" name="email" placeholder="Tu email" required />
+    <textarea name="message" rows="5" placeholder="Tu mensaje" required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
 
 
   </body>
