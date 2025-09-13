@@ -1,22 +1,21 @@
-// Array con tus proyectos
-
 const proyectos = [
   {
-    titulo: "Sistema de Inventario",
+    titulo: "Elohim Descartables",
     descripcion:
-      "App web para gestionar productos, stock y reportes con autenticación JWT.",
-    tecnologias: ["HTML", "CSS", "JavaScript", "Node.js"],
-    imagen: "images/inventario.png", // reemplazá con tu captura
-    github: "https://github.com/Facundo-Rodriguezz/sistema-inventario",
-    demo: "#",
+      "Página web de ventas para un local de descartables, desarrollada con Astro y Tailwind CSS, optimizada para rendimiento y desplegada en Netlify.",
+    tecnologias: ["Astro", "Tailwind CSS", "JavaScript", "Netlify"],
+    imagen: "/archivos/imagendescrtable.png", 
+    github: "https://github.com/Facundo-Rodriguezz/FrontElohim",
+    demo: "https://elohimdescartabless.netlify.app/",
   },
   {
-    titulo: "Blog con Astro",
-    descripcion: "Blog rápido y optimizado con Astro y Tailwind.",
-    tecnologias: ["Astro", "Tailwind"],
-    imagen: "images/blog.png",
-    github: "https://github.com/Facundo-Rodriguezz/blog-astro",
-    demo: "#",
+    titulo: "Formulario Dinámico",
+    descripcion:
+      "Formulario web interactivo creado con JavaScript, estilizado con CSS y desplegado en Netlify. Permite validar datos de manera dinámica y mejorar la experiencia del usuario.",
+    tecnologias: ["HTML", "CSS", "JavaScript", "Netlify"],
+    imagen: "/archivos/imagen formulario.png", 
+    github: "https://github.com/Facundo-Rodriguezz/portafolio-personal",
+    demo: "https://formulario-javascriptt.netlify.app/",
   },
   {
     titulo: "Landing Page",
@@ -28,10 +27,8 @@ const proyectos = [
   },
 ];
 
-// Contenedor donde van los proyectos
-const contenedor = document.getElementById("contenedor-proyectos");
 
-// Generar dinámicamente las cards
+const contenedor = document.getElementById("contenedor-proyectos");
 proyectos.forEach((proyecto) => {
   const card = document.createElement("div");
   card.classList.add("card");
@@ -53,3 +50,27 @@ proyectos.forEach((proyecto) => {
 
   contenedor.appendChild(card);
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const contactForm = document.getElementById('contactForm');
+
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    const destinatario = "fakundor05@gmail.com"; 
+    const subject = encodeURIComponent(`Contacto de ${name}`);
+    const body = encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`);
+
+    
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${destinatario}&su=${subject}&body=${body}`;
+
+    
+    window.open(gmailUrl, '_blank');
+  });
+});
+
