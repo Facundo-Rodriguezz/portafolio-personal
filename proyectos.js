@@ -4,7 +4,7 @@ const proyectos = [
     descripcion:
       "Página web de ventas para un local de descartables, desarrollada con Astro y Tailwind CSS, optimizada para rendimiento y desplegada en Netlify.",
     tecnologias: ["Astro", "Tailwind CSS", "JavaScript", "Netlify"],
-    imagen: "/archivos/imagendescrtable.png", 
+    imagen: "/archivos/imagendescrtable.png",
     github: "https://github.com/Facundo-Rodriguezz/FrontElohim",
     demo: "https://elohimdescartabless.netlify.app/",
   },
@@ -13,7 +13,7 @@ const proyectos = [
     descripcion:
       "Formulario web interactivo creado con JavaScript, estilizado con CSS y desplegado en Netlify. Permite validar datos de manera dinámica y mejorar la experiencia del usuario.",
     tecnologias: ["HTML", "CSS", "JavaScript", "Netlify"],
-    imagen: "/archivos/imagen formulario.png", 
+    imagen: "/archivos/imagen formulario.png",
     github: "https://github.com/Facundo-Rodriguezz/portafolio-personal",
     demo: "https://formulario-javascriptt.netlify.app/",
   },
@@ -26,7 +26,6 @@ const proyectos = [
     demo: "#",
   },
 ];
-
 
 const contenedor = document.getElementById("contenedor-proyectos");
 proyectos.forEach((proyecto) => {
@@ -51,26 +50,26 @@ proyectos.forEach((proyecto) => {
   contenedor.appendChild(card);
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const contactForm = document.getElementById("contactForm");
 
-document.addEventListener('DOMContentLoaded', () => {
-  const contactForm = document.getElementById('contactForm');
-
-  contactForm.addEventListener('submit', function(e) {
+  contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
 
-    const destinatario = "fakundor05@gmail.com"; 
+    const destinatario = "fakundor05@gmail.com";
     const subject = encodeURIComponent(`Contacto de ${name}`);
-    const body = encodeURIComponent(`Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`);
+    const body = encodeURIComponent(
+      `Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`
+    );
 
-    
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${destinatario}&su=${subject}&body=${body}`;
+    // Mailto abre la app de correo por defecto en PC y móvil
+    const mailtoUrl = `mailto:${destinatario}?subject=${subject}&body=${body}`;
 
-    
-    window.open(gmailUrl, '_blank');
+    // En móvil abre directamente la app de correo instalada
+    window.location.href = mailtoUrl;
   });
 });
-
