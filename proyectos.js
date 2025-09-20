@@ -65,11 +65,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const body = encodeURIComponent(
       `Nombre: ${name}\nEmail: ${email}\n\nMensaje:\n${message}`
     );
+    // Detectar si es móvil
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-    // Mailto abre la app de correo por defecto en PC y móvil
-    const mailtoUrl = `mailto:${destinatario}?subject=${subject}&body=${body}`;
-
-    // En móvil abre directamente la app de correo instalada
-    window.location.href = mailtoUrl;
+    if (isMobile) {
+      // En móvil abre la app de correo
+      const mailtoUrl = `mailto:${destinatario}?subject=${subject}&body=${body}`;
+      window.location.href = mailtoUrl;
+    } else {
+      // En PC abre Gmail en navegador
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${destinatario}&su=${subject}&body=${body}`;
+      window.open(gmailUrl, "_blank");
+    }
   });
 });
