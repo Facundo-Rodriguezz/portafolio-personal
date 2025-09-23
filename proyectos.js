@@ -18,11 +18,11 @@ const proyectos = [
     demo: "https://formulario-javascriptt.netlify.app/",
   },
   {
-    titulo: "Landing Page",
-    descripcion: "Landing moderna para un negocio local con diseño responsive.",
-    tecnologias: ["HTML", "CSS", "JavaScript"],
-    imagen: "images/landing.png",
-    github: "https://github.com/Facundo-Rodriguezz/landing-page",
+    titulo: "Portafolio Personal",
+    descripcion: "Pagina portafolio, Estilizada con CSS y desplegada en Netlify. Con el fin de expresar la capacidad de programacion y la flexibilidad y el alcance de la tecnologia.",
+    tecnologias: ["HTML", "CSS", "JavaScript", "Netlify"],
+    imagen: "/assets/img/Captura de pantalla 2025-09-23 202739.png",
+    github: "https://github.com/Facundo-Rodriguezz/portafolio-personal",
     demo: "#",
   },
 ];
