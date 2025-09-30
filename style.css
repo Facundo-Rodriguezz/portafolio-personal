@@ -74,6 +74,9 @@ header nav a:hover {
     transition: all .5s ease;
 
 }
+.navlist.open {
+    right: 0;
+}
 
 .navlist a:hover {
     border-bottom: 2px solid white;
@@ -203,7 +206,7 @@ section {
 }
 
 .scroll-down {
-    position: fixed;
+    position: absolute;
     bottom: 4%;
     right: 3%;
 
@@ -559,7 +562,9 @@ html {
 
 
 /* Media Queries para Responsividad */
-@media (max-width:992px) {
+
+/* Tablet y pantallas medianas */
+@media (max-width: 992px) {
     .navlist a:first-child {
         margin-left: 0;
         margin-right: 65px;
@@ -571,7 +576,7 @@ html {
 
     section {
         padding: 0 10%;
-        transition: .2s;
+        transition: 0.2s;
     }
 
     .hero-text {
@@ -582,7 +587,7 @@ html {
         text-align: center;
     }
 
-    .hero-img img {
+    .hero-image img {
         width: 80%;
         margin: 10% 0 0 10%;
     }
@@ -591,21 +596,14 @@ html {
         font-size: 70%;
     }
 
-    .icons {
-        display: none;
-    }
-
+    .icons,
     .scroll-down {
         display: none;
     }
-
 }
 
+/* Móvil grande / tablets pequeñas */
 @media (max-width: 720px) {
-    .menu-icon-action {
-        display: block;
-    }
-
     #menu-icon {
         display: block;
     }
@@ -627,19 +625,18 @@ html {
 
     .navlist {
         position: absolute;
-        top: 100%;
-        right: 0vw;
-        /* Más a la derecha en mobile */
+        top: 60px; /* debajo del header */
+        right: -100%; /* oculto fuera de la pantalla */
         width: 200px;
-        height: 200px;
-        background-color: #02313a71;
+        height: auto;
+        background-color: rgba(2, 49, 58, 0.85);
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 30px 20px;
-        transition: all .5s ease;
+        padding: 30px 0;
+        gap: 20px;
+        transition: right 0.5s ease;
         pointer-events: none;
-        opacity: 0;
     }
 
     .navlist a {
@@ -648,14 +645,15 @@ html {
         font-size: 18px;
     }
 
-    #menu-toggle:checked~.navlist {
-        right: 0vw;
-        /* Mantiene el menú pegado a la derecha cuando está activo */
+    /* Cuando se activa el toggle desde JS */
+    .navlist.open {
+        right: 10px;
         pointer-events: auto;
         opacity: 1;
     }
 }
 
+/* Móvil pequeño / smartphones */
 @media (max-width: 480px) {
     .hero-text h1 {
         font-size: 32px;
@@ -675,50 +673,14 @@ html {
 
     .navlist {
         width: 90vw;
-        left: auto;
-        right: 0vw;
-        /* Más a la derecha en mobile */
-        height: 100vh;
+        right: -100%; /* oculto fuera de pantalla */
+        height: auto;
         top: 60px;
         padding: 10px 0;
     }
 
-    header {
-        padding: 10px 5%;
-    }
-
-    section {
-        padding: 0 3%;
-    }
-
-    #menu-toggle:checked~.navlist {
-        right: 0vw;
-        /* Mantiene el menú pegado a la derecha cuando está activo */
-        pointer-events: auto;
-        opacity: 1;
-    }
-}
-
-@media (max-width: 480px) {
-    .navlist {
-        position: absolute;
-        top: 100%;
-        right: 0vw;
-        /* Más a la derecha en mobile */
-        width: 200px;
-        height: 200px;
-        background-color: #02313a71;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 30px 20px;
-        transition: all .5s ease;
-        pointer-events: none;
-        opacity: 0
-    }
-
-    #menu-toggle:checked~.navlist {
-        right: 0;
+    .navlist.open {
+        right: 10px;
         pointer-events: auto;
         opacity: 1;
     }
@@ -729,21 +691,5 @@ html {
 
     section {
         padding: 0 3%;
-    }
-
-    .hero-text h1 {
-        font-size: 32px;
-    }
-
-    .hero-text h4 {
-        font-size: 15px;
-    }
-
-    .hero-text p {
-        font-size: 60%;
-    }
-
-    .hero-image img {
-        width: 220px;
     }
 }

@@ -1,3 +1,43 @@
+document.addEventListener("DOMContentLoaded", () => {
+const sr = ScrollReveal({
+  distance: '50px',
+  duration: 1500,
+  delay: 200,
+  reset: true
+});
+
+// HERO
+sr.reveal('.hero-text h5', { origin: 'top' });
+sr.reveal('.hero-text h4', { origin: 'top', delay: 100 });
+sr.reveal('.hero-text h1', { origin: 'top', delay: 200 });
+sr.reveal('.hero-text p', { origin: 'bottom', delay: 300 });
+sr.reveal('.hero-text a', { origin: 'bottom', delay: 400 });
+sr.reveal('.hero-image img', { origin: 'right', delay: 500 });
+
+// SOBRE MÍ
+sr.reveal('.about h2', { origin: 'top', delay: 200 });
+sr.reveal('.about p', { origin: 'bottom', delay: 300 });
+
+// TECNOLOGÍAS
+sr.reveal('.skills h2', { origin: 'top', delay: 200 });
+sr.reveal('.grid-skills .skill', { origin: 'bottom', interval: 150 });
+
+// PROYECTOS
+sr.reveal('.proyectos h2', { origin: 'top', delay: 200 });
+sr.reveal('.grid-proyectos .card', { origin: 'bottom', interval: 200 });
+sr.reveal('#contenedor-proyectos', { origin: 'bottom', delay: 400 });
+
+
+// seccion de contacto el scroll
+sr.reveal('.contact h2', { origin: 'top', delay: 200 });
+sr.reveal('.contact form', { origin: 'bottom', delay: 300 });
+
+
+
+
+
+
+
 const proyectos = [
   {
     titulo: "Elohim Descartables",
@@ -48,10 +88,12 @@ proyectos.forEach((proyecto) => {
   `;
 
   contenedor.appendChild(card);
+  sr.reveal(card, { origin: 'bottom', delay: 100 });
+  
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const contactForm = document.getElementById("contactForm");
+
+const contactForm = document.getElementById("contactForm");
 
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -79,3 +121,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+const menu = document.querySelector("#menu-icon");
+const navlist = document.querySelector(".navlist");
+menu.onclick = () => {
+  menu.classList.toggle("bx-x");
+  navlist.classList.toggle("open");
+}
+
