@@ -58,12 +58,20 @@ const proyectos = [
     demo: "https://formulario-javascriptt.netlify.app/",
   },
   {
-    titulo: "Portafolio Personal",
-    descripcion: "Pagina portafolio, Estilizada con CSS y desplegada en Netlify. Con el fin de expresar la capacidad de programacion y la flexibilidad y el alcance de la tecnologia.",
+    titulo: "Ciudad Del Clima",
+    descripcion: "Aplicación web que consume una API de clima para mostrar el estado del tiempo en diferentes ciudades. Desarrollada con HTML, CSS y JavaScript, y desplegada en Netlify.",
     tecnologias: ["HTML", "CSS", "JavaScript", "Netlify"],
-    imagen: "/assets/img/Captura de pantalla 2025-09-23 202739.png",
-    github: "https://github.com/Facundo-Rodriguezz/portafolio-personal",
-    demo: "#",
+    imagen: "/assets/img/captura-clima.png",
+    github: "https://github.com/Facundo-Rodriguezz/Aplicacion-Clima",
+    demo: "https://ciudaddelclima.netlify.app/",
+  },
+  {
+    titulo: "Red Social 'X'",
+    descripcion: "Clon de la red social 'X' desarrollado con React y Tailwind CSS. Incluye funcionalidades como publicaciones, comentarios y sistema de likes. Desplegado en Netlify.",
+    tecnologias: ["HTML", "CSS", "JavaScript", "Netlify"],
+    imagen: "/assets/img/LOSTFRIENDS.png",
+    github: "https://github.com/Facundo-Rodriguezz/RedSocial",
+    demo: "https://lostfriends.netlify.app/",
   },
 ];
 
