@@ -34,7 +34,7 @@ Agregá acá una imagen o captura de pantalla del portafolio:
 <img width="1899" height="932" alt="Captura de pantalla 2025-09-29 214505" src="https://github.com/user-attachments/assets/f6e574e4-be79-43eb-99f1-fdc94013410e" />
 
 
-*(Podés reemplazar la ruta por la correcta según tu proyecto)*
+
 
 ---
 
