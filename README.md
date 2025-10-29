@@ -63,4 +63,4 @@ Abrí tu navegador en http://localhost:4321
 🌍 Demo en línea
 🔗 Ver Portafolio en Netlify
 
-(Reemplazá el enlace por el real cuando lo tengas desplegado)
+
