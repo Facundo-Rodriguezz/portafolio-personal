@@ -61,6 +61,6 @@ npm run dev
 Abrí tu navegador en http://localhost:4321
 
 🌍 Demo en línea
-🔗 Ver Portafolio en Netlify
+🔗 Ver Portafolio en Netlify https://portafolio-personal-proyect.netlify.app/
 
 
